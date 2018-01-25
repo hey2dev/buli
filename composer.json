@@ -17,7 +17,8 @@
     },
     "require-dev": {
         "symfony/dotenv": "^3.4",
-        "symfony/web-server-bundle": "^3.4"
+        "symfony/web-server-bundle": "^3.4",
+        "symfony/apache-pack": "^1.0"
     },
     "config": {
         "preferred-install": {
