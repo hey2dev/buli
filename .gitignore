@@ -10,3 +10,9 @@
 .web-server-pid
 ###< symfony/web-server-bundle ###
 /nbproject
+/node_modules
+
+###> symfony/webpack-encore-pack ###
+/node_modules/
+/public/build/
+###< symfony/webpack-encore-pack ###
