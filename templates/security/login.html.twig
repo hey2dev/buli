@@ -1,11 +1,11 @@
 {% extends "@App/base.html.twig" %}
+{% trans_default_domain 'app' %}
 
-{% block body %}
-    
+{% block body %}    
     <div class="container container-login">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">login</h3>
+                <h3 class="panel-title"><i class="fa fa-user"></i>&nbsp;{% trans %}Log In{% endtrans %}</h3>
             </div>
             <div class="panel-body">
                 
@@ -20,22 +20,33 @@
                 
                 <form action="{{ path('login') }}" class="form-horizontal" method="post">
                     <div class="form-group">
-                        <label for="username" class="col-sm-4 control-label">username:</label>
+                        <label for="username" class="col-sm-4 control-label">{% trans %}username{% endtrans %}:</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="username" name="_username" value="{{ username }}" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password" class="col-sm-4 control-label">password:</label>
+                        <label for="password" class="col-sm-4 control-label">{% trans %}password{% endtrans %}:</label>
                         <div class="col-sm-8">
                             <input type="password" class="form-control" id="password" name="_password" />
+                        </div>
+                    </div>
+                        
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="_remember_me" checked />
+                                    {% trans %}remember me?{% endtrans %}
+                                </label>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-8">
-                            <button type=submit" class="btn btn-primary">login</button>
+                            <button type=submit" class="btn btn-primary">{% trans %}log in{% endtrans %}</button>
                         </div>
                     </div>
                 </form>
